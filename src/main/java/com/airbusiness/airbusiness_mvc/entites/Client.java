@@ -23,7 +23,9 @@ public class Client {
 	private String lastName;
 
 	private String address;
+
 	private String telephone;
+
 	private double outstandingBalance;
 
 	// -------------------------------------
