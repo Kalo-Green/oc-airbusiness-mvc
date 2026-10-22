@@ -29,6 +29,12 @@ public class MaintenanceController {
 		return "maintenance";
 	}
 
+	@RequestMapping("/maintenance/unfixed")
+	public String unFixed(Model model) {
+		model.addAttribute("maintenance", maintenanceRepository.findByFixed(""));
+		return "maintenance";
+	}
+
 	@GetMapping("/new-issue")
 	public String showNewIssueForm(MaintenanceIssue maintenance) {
 		return "add-maintenance";
