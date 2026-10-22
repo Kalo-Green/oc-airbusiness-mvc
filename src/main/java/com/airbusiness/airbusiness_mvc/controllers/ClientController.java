@@ -30,6 +30,13 @@ public class ClientController {
 		return "clients";
 	}
 
+	// Affiche les clients ayant un solde impayé
+	@GetMapping("/clients/owe")
+	public String clientOwe(Model model) {
+		model.addAttribute("clients", clientRepository.findByOutsandingBalanceGreaterThan(0.0));
+		return "clients";
+	}
+
 	@GetMapping("/new-client")
 	public String showNewClientForm(Client client) {
 		return "add-client";
