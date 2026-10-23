@@ -13,7 +13,7 @@ public class Plane {
 	// ATTRIBUTES
 	// -------------------------------------
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@NotBlank(message = "Type is mandatory")

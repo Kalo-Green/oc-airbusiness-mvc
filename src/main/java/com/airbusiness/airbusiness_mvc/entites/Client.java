@@ -13,7 +13,7 @@ public class Client {
 	// ATTRIBUTES
 	// -------------------------------------
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@NotBlank(message = "First Name is mandatory")
