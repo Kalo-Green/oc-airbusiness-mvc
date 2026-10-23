@@ -37,6 +37,12 @@ public class ClientController {
 		return "clients";
 	}
 
+	@GetMapping("/clients/owe-lots")
+	public String clientOweLots(Model model) {
+		model.addAttribute("clients", clientRepository.findByOutsandingBalanceGreaterThan(150.0));
+		return "clients";
+	}
+
 	@GetMapping("/new-client")
 	public String showNewClientForm(Client client) {
 		return "add-client";
